@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        #container {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-areas:
+                "header header header header"
+                "box1 box2 box3 sidebar"
+                "section section section section"
+                "footer footer footer footer";
+                color: white;
+                grid-template-rows: 2fr 6fr 6fr 2fr ;
+
+
+        }
+
+
+        #header {
+            grid-area: header;
+            background-color: red;
+        }
+
+        #box1 {
+            grid-area: box1;
+            background-color: blue;
+        }
+
+        #box1 {
+            grid-area: box2;
+            background-color: brown;
+        }
+
+        #box3 {
+            grid-area: box3;
+            background-color:rgb(43, 43, 2);
+        }
+
+        #sidebar {
+            grid-area: sidebar;
+            grid-row: 2/span 2;
+            background-color: blueviolet;
+
+        }
+
+        #section {
+            grid-area: section;
+            grid-column: 1/4;
+            background-color: rgb(14, 196, 199);
+
+        
+        }
+
+        #footer {
+            grid-area: footer;
+            background-color: black;
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgb(158, 158, 240);
+            padding: 15px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="header" class=" box"> header</div>
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div>
+        <div id="box3" class="box ">box3</div>
+        <div id="sidebar" class=" box">sidebar</div>
+        <div id="section" class=" box">main contant</div>
+        <div id="footer" class="box">copy right </div>
+    </div>
+</body>
+
+</html>
